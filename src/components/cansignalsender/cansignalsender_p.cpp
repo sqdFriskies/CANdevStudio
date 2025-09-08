@@ -103,8 +103,17 @@ QJsonObject CanSignalSenderPrivate::getSettings()
     return ret;
 }
 
-void CanSignalSenderPrivate::setSettings(const QJsonObject& json)
+void CanSignalSenderPrivate::setSettings(const QJsonObject& json) // fixed
 {
+    // // Load all properties into _props excluding "rows"
+    for (auto it = json.begin(); it != json.end(); ++it) {
+        const QString key = it.key();
+        if (key != "rows") {
+            _props[key] = it.value().toVariant(); // Restore properties like databaseId
+        }
+    }
+
+    // Existing rows processing
     if (json.contains("rows")) {
         if (json["rows"].type() == QJsonValue::Array) {
             auto rowArray = json["rows"].toArray();

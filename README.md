@@ -2,6 +2,16 @@
 [![CANdevStudio](https://github.com/GENIVI/CANdevStudio/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/GENIVI/CANdevStudio/actions/workflows/build.yml?query=branch%3Amaster++) [![codecov](https://codecov.io/gh/GENIVI/CANdevStudio/branch/master/graph/badge.svg)](https://codecov.io/gh/GENIVI/CANdevStudio) [![Doxygen](https://img.shields.io/badge/Doxygen-master-blue.svg)](https://genivi.github.io/CANdevStudio/)
 
 
+## About this fork
+
+This project is a fork of [GENIVI/CANdevStudio](https://github.com/GENIVI/CANdevStudio).
+
+It includes additional bugfixes and improvements made by [sqdFriskies(https://github.com/sqdFriskies) ].
+
+Original project is licensed under [MPL-2.0](./LICENSE).  
+This fork continues to use the same license (MPL-2.0).
+
+
 
 * [Overview](#overview)
   * [Compatible CAN interfaces](#compatible-can-interfaces)

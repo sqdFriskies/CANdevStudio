@@ -23,6 +23,8 @@ public:
     QJsonObject getSettings();
     void setSettings(const QJsonObject& json);
 
+    int _databaseId;
+
 private:
     void initProps();
 
