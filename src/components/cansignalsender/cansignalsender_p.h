@@ -1,14 +1,14 @@
 #ifndef CANSIGNALSENDER_P_H
 #define CANSIGNALSENDER_P_H
 
-#include <QtCore/QObject>
-#include <memory>
-#include "gui/cansignalsenderguiimpl.h"
 #include "cansignalsender.h"
 #include "cansignalsendertablemodel.h"
-#include <cantypes.hpp>
+#include "gui/cansignalsenderguiimpl.h"
 #include <QUuid>
+#include <QtCore/QObject>
 #include <candbhandler.h>
+#include <cantypes.hpp>
+#include <memory>
 #include <propertyfields.h>
 
 class CanSignalSender;
@@ -18,10 +18,13 @@ class CanSignalSenderPrivate : public QObject {
     Q_DECLARE_PUBLIC(CanSignalSender)
 
 public:
-    CanSignalSenderPrivate(CanSignalSender* q, CanSignalSenderCtx&& ctx = CanSignalSenderCtx(new CanSignalSenderGuiImpl));
+    CanSignalSenderPrivate(
+        CanSignalSender* q, CanSignalSenderCtx&& ctx = CanSignalSenderCtx(new CanSignalSenderGuiImpl));
     ComponentInterface::ComponentProperties getSupportedProperties() const;
     QJsonObject getSettings();
     void setSettings(const QJsonObject& json);
+
+    int _databaseId;
 
 private:
     void initProps();

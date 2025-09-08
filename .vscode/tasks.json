@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure CANdev",
+            "type": "shell",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug ..", //-DLOGGING=ON
+            //"command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn": [
+                "SaveAllFiles"
+            ]
+        },
+        {
+            "label": "Configure CANdev Release",
+            "type": "shell",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Release ..", //-DLOGGING=ON
+            //"command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn": [
+                "SaveAllFiles"
+            ]
+        },
+        {
+            "label": "Save & build debug CANdev",
+            "type": "shell",
+            "command": "make -d",
+            //"command": "cmake -DCMAKE_BUILD_TYPE=Debug ..",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn": [
+                "SaveAllFiles"
+            ]
+        },
+        {
+            "label": "SaveAllFiles",
+            "command": "${command:workbench.action.files.saveAll}",
+            "type": "shell",
+            "problemMatcher": []
+        }
+    ]
+}
