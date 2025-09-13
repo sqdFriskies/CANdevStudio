@@ -40,6 +40,9 @@ private:
 struct CanDeviceInterface;
 typedef Context<CanDeviceInterface> CanDeviceCtx;
 
+struct CustomDeviceInterface;
+typedef Context<CustomDeviceInterface> CustomDeviceCtx;
+
 struct CRSGuiInterface;
 struct NLMFactoryInterface;
 typedef Context<CRSGuiInterface, NLMFactoryInterface> CanRawSenderCtx;

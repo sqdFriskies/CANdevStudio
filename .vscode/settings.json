@@ -78,5 +78,5 @@
         "valarray": "cpp",
         "variant": "cpp"
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
 }

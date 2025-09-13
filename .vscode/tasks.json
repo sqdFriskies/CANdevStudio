@@ -34,7 +34,7 @@
         {
             "label": "Save & build debug CANdev",
             "type": "shell",
-            "command": "make -d",
+            "command": "make -d -j5",
             //"command": "cmake -DCMAKE_BUILD_TYPE=Debug ..",
             "options": {
                 "cwd": "${workspaceFolder}/build"
